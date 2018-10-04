@@ -9,9 +9,4 @@ shinyServer(function(input, output) {
       addProviderTiles("CartoDB.Positron")
   })
   
-  # Reactively receive instructions from UI----------------------------------------------
-  
-}) # End
- 
-
   
