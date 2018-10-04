@@ -34,10 +34,10 @@ get_yelp_data <- function(latitude = 40.748817,
     rad <- as.integer(radius)
   }
   
-  if(is.double(price)) {
-    stop("price must be of type $, $$ or $$$")
+  if(!is.numeric(price)) {
+    stop("price must be of type integer")
   } else {
-    p <- price
+    p <- as.integer(price)
   }
 
 # Initialization ---------------------------------------------------------
@@ -105,4 +105,4 @@ get_yelp_data <- function(latitude = 40.748817,
   # Return
   payload
 }
-
+get_yelp_data()
