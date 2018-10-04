@@ -14,6 +14,7 @@ shinyUI(
         sliderInput("decimal", "Distance (in miles):",
                     min = 0, max = 2.5,
                     value = 1.0, step=0.5),
+        #checkbox for price
         checkboxGroupInput("checkGroup", label = h3("Price"), 
                                                              choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3),
                                                              selected = 1)
