@@ -1,13 +1,29 @@
-library(shiny)
+## ui.R ##
+library(shinydashboard)
 library(leaflet)
 
-# Define UI for application that draws a histogram
-shinyUI(fluidPage(
+shinyUI(
+  dashboardPage(
+    skin = 'blue',
+    dashboardHeader(title = "NYC Trip Guide", titleWidth = 240
+    ),# End of Header
   
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("obs", "Number of observations:", min = 10, max = 500, value = 100)
-    ),
-    mainPanel(plotOutput("distPlot"))
-  )
-))
+    dashboardSidebar(
+      sidebarMenu(
+        menuItem("NYC Map", tabName = "mapmenu", icon = icon("bank"),
+        sliderInput("decimal", "Distance (in miles):",
+                    min = 0, max = 2.5,
+                    value = 1.0, step=0.5))
+      ) # End of sidebarMenu
+    ), # End of Sidebar
+    
+    dashboardBody(
+      tabItems(
+        tabItem(tabName = "mapmenu",
+                leafletOutput("map", height = 760)
+  
+        )
+      ) # End of tabItems
+    ) # End of dashboardBody
+  ) # End
+)          
