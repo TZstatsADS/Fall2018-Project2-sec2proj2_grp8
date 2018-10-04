@@ -8,6 +8,7 @@ shinyServer(function(input, output) {
       setView(lng = -73.980, lat = 40.740, zoom =13) %>%
       addProviderTiles("CartoDB.Positron")
   })
+  output$value <- renderPrint({ input$checkGroup })
   
 })  
 
