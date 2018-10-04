@@ -1,6 +1,6 @@
 # Project 2: Shiny App Development Version 2.0
 
-Test
+Test readme
 
 ### [Project Description](doc/project2_desc.md)
 
