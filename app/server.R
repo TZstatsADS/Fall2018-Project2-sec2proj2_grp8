@@ -1,9 +1,12 @@
+## server.R ##
 
-# Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-  
-  output$distPlot <- renderPlot({
-    hist(rnorm(input$obs), col = 'darkgray', border = 'red')})
-})
+  # Map rendering -----------------------------------------------------------------------------
+  # Initialization
+  output$map <- renderLeaflet({
+    leaflet() %>% 
+      setView(lng = -73.980, lat = 40.740, zoom =13) %>%
+      addProviderTiles("CartoDB.Positron")
+  })
   
   
