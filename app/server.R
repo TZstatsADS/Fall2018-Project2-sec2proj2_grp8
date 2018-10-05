@@ -1,5 +1,6 @@
 ## server.R ##
 library(shiny)
+library(dplyr)
 
 shinyServer(function(input, output) {
   # Map rendering -----------------------------------------------------------------------------
@@ -15,18 +16,12 @@ shinyServer(function(input, output) {
   
   # Check attractions inputs
   observeEvent(input$att, {
-    'output$var <- renderText({
-      input$att
-    })'
     m = match(input$att,att_loc$Code)
     att_lng = att_loc$Longitude[m]
     att_lat = att_loc$Latitude[m]
     att_nm = att_loc$Attraction[m]
     att_cd = att_loc$Code[m]
     df_app = data.frame(att_nm, att_lng, att_lat, att_cd)
-    'output$at <- DT::renderDataTable({
-      df_app
-    })'
     
     # Make a list of icons
     attIcons <- iconList(
