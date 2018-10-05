@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 Attraction,Latitude,Longitude,Code,
 Statue of Liberty (Statue Cruises Manhattan),40.703343,-74.016972,SL,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
 Central Park,40.782998,-73.965247,CP,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
@@ -19,4 +21,51 @@ Carnegie Hall,40.765158,-73.979924,CH,"<div>Icons made by <a href=""http://www.f
 Bryant Park,40.753585,-73.983237,BP,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
 Lincoln Center,40.772476,-73.983494,LC,"<div>Icons made by <a href=""https://www.flaticon.com/authors/smashicons"" title=""Smashicons"">Smashicons</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
 The Oculus,40.711448,-74.011135,O,"<div>Icons made by <a href=""https://www.flaticon.com/authors/monkik"" title=""monkik"">monkik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+=======
+Attraction,Latitude,Longitude,Code,
+Statue of Liberty (Statue Cruises Manhattan),40.703343,-74.016972,SL,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Central Park,40.782998,-73.965247,CP,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Rockefeller Center,40.758813,-73.978674,RC,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Metropolitan Museum of Art,40.779441,-73.963245,MA,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Broadway and Theater District,40.75659,-73.98626,BT,"<div>Icons made by <a href=""https://www.flaticon.com/authors/smashicons"" title=""Smashicons"">Smashicons</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Empire State Building,40.748817,-73.985428,ES,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+9/11 Memorial and Museum,40.711575,-74.013167,MM,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+The High Line,40.747976,-74.004717,HL,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Times Square,40.759062,-73.98502,TS,"<div>Icons made by <a href=""https://www.flaticon.com/authors/smashicons"" title=""Smashicons"">Smashicons</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Brooklyn Bridge (City Hall Station),40.712838,-74.004274,BB,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Grand Central Terminal,40.752728,-73.977229,GS,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+One World Observatory,40.713352,-74.013362,OW,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+New York Public Library,40.753196,-73.982256,PL,"<div>Icons made by <a href=""https://www.flaticon.com/authors/twitter"" title=""Twitter"">Twitter</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Charging Bull,40.705558,-74.013444,CB,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Radio City Music Hall,40.759982,-73.979979,RCM,"<div>Icons made by <a href=""https://www.flaticon.com/authors/pongsakornred"" title=""pongsakornRed"">pongsakornRed</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+St. Patrick's Cathedral,40.758488,-73.975994,SP,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Carnegie Hall,40.765158,-73.979924,CH,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Bryant Park,40.753585,-73.983237,BP,"<div>Icons made by <a href=""http://www.freepik.com"" title=""Freepik"">Freepik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+Lincoln Center,40.772476,-73.983494,LC,"<div>Icons made by <a href=""https://www.flaticon.com/authors/smashicons"" title=""Smashicons"">Smashicons</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+The Oculus,40.711448,-74.011135,O,"<div>Icons made by <a href=""https://www.flaticon.com/authors/monkik"" title=""monkik"">monkik</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+>>>>>>> ac5310ffbba28559de370bf2d5ef051ea164f0ea
 Macy's Herald Square,40.750794,-73.988959,MH,"<div>Icons made by <a href=""https://www.flaticon.com/authors/smashicons"" title=""Smashicons"">Smashicons</a> from <a href=""https://www.flaticon.com/"" title=""Flaticon"">www.flaticon.com</a> is licensed by <a href=""http://creativecommons.org/licenses/by/3.0/"" title=""Creative Commons BY 3.0"" target=""_blank"">CC 3.0 BY</a></div>"
+=======
+Attraction,Latitude,Longitude,
+Statue of Liberty (Statue Cruises Manhattan),40.703343,-74.016972,
+Central Park,40.782998,-73.965247,
+Rockefeller Center,40.758813,-73.978674,
+Metropolitan Museum of Art,40.779441,-73.963245,
+Broadway and Theater District,40.75659,-73.98626,
+Empire State Building,40.748817,-73.985428,
+9/11 Memorial and Museum,40.711575,-74.013167,
+The High Line,40.747976,-74.004717,
+Times Square,40.759062,-73.98502,
+Brooklyn Bridge (City Hall Station),40.712838,-74.004274,
+Grand Central Terminal,40.752728,-73.977229,
+One World Observatory,40.713352,-74.013362,
+New York Public Library,40.753196,-73.982256,
+Charging Bull,40.705558,-74.013444,
+Radio City Music Hall,40.759982,-73.979979,
+St. Patrick's Cathedral,40.758488,-73.975994,
+Carnegie Hall,40.765158,-73.979924,
+Bryant Park,40.753585,-73.983237,
+Lincoln Center,40.772476,-73.983494,
+The Oculus,40.711448,-74.011135,
+Macy's Herald Square,40.750794,-73.988959,
+>>>>>>> parent of c7f9d87... alex's changes

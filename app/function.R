@@ -15,7 +15,7 @@ get_yelp_data <- function(latitude = 40.748817,
                           radius = 5000,
                           price = NULL){
 
-  # Type inspection ---------------------------------------------------------
+# Type inspection ---------------------------------------------------------
   if(!is.double(latitude)) {
     stop("latitude must be a decimal number")
   } else {
@@ -42,7 +42,7 @@ get_yelp_data <- function(latitude = 40.748817,
     p <- as.integer(price)
   }
 
-  # Initialization ---------------------------------------------------------
+# Initialization ---------------------------------------------------------
   yelp <- "https://api.yelp.com"
   term <- "restaurants"
   location <- "NYC"
@@ -66,7 +66,7 @@ get_yelp_data <- function(latitude = 40.748817,
   res <- GET(url, add_headers('Authorization' = paste("bearer", "zLZesNlW8YSPyNP9poXD-_FDOhvNFACzrq-xAul5H3b6isbviX3o2EuCeifPRAsTvfz_c0lPzJUPNtzUIeowGHmhheCAxRMWz_lc5cqQAY-7X94pAvYkC3pXNjG2W3Yx")))
   results <- content(res)
   
-  # Define a function to parse search results with only the columns needed -----
+# Define a function to parse search results with only the columns needed -----
   yelp_httr_parse <- function(x) {
     
     # Set a list of wanted columns
@@ -107,3 +107,4 @@ get_yelp_data <- function(latitude = 40.748817,
   # Return
   payload
 }
+
