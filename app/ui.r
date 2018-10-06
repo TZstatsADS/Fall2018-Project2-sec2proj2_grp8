@@ -1,4 +1,4 @@
-packages.used=c("shinydashboard","leaflet")
+packages.used=c("shinydashboard","leaflet","yelpr")
 
 # check packages that need to be installed.
 packages.needed=setdiff(packages.used,
@@ -12,6 +12,7 @@ if(length(packages.needed)>0){
 ## ui.R ##
 library(shinydashboard)
 library(leaflet)
+library(yelpr)
 
 shinyUI(
   dashboardPage(
@@ -44,7 +45,18 @@ shinyUI(
                        # maxItems = 3
                        options = list(placeholder = 'Choose at most 3 attractions')
         ),
-        
+        #Slider input for cuisines
+        selectizeInput('cat', "Cuisine",
+                       choices = list(
+                         `American` = 'tradamerican', `Chinese` = 'chinese',
+                         `Cuban` = 'cuban', `Indian` = 'indpak',
+                         `Italian` = 'italian', `Japanese` = 'japanese',
+                         `Korean` = 'korean', `Mexican` = 'mexican'
+                       ),
+                       multiple = TRUE,
+                       # maxItems = 3
+                       options = list(placeholder = 'Choose up to 3 cuisins')
+        ),
         # Radius slider
         sliderInput("decimal", "Distance (in miles):",
                     min = 0, max = 2.5,
@@ -53,7 +65,9 @@ shinyUI(
         # checkbox for price
         checkboxGroupInput("checkGroup", "Price", 
                            choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3),
-                           selected = 1)
+                           selected = 1),
+        actionButton("search", "Search")
+        #fluidRow(column(3,tableOutput("bnytbl")))
         
         ) # End of sidebarMenu
     ), # End of Sidebar
@@ -62,7 +76,7 @@ shinyUI(
       tabItems(
         tabItem(tabName = "mapmenu",
                 leafletOutput("map", height = 760)
-  
+                
         )
       ) # End of tabItems
     ) # End of dashboardBody

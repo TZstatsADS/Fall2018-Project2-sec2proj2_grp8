@@ -1,6 +1,7 @@
 ## server.R ##
 library(shiny)
 library(dplyr)
+library(yelpr)
 
 shinyServer(function(input, output) {
   # Map rendering -----------------------------------------------------------------------------
@@ -11,9 +12,7 @@ shinyServer(function(input, output) {
       addProviderTiles("CartoDB.Positron")
   })
   
-  # checkbox for price
-  output$value <- renderPrint({ input$checkGroup })
-  
+ 
   # Check attractions inputs
   observeEvent(input$att, {
     m = match(input$att,att_loc$Code)
@@ -49,16 +48,42 @@ shinyServer(function(input, output) {
     )
     
     # Output to map
-    leafletProxy("map", data = df_app) %>%
+  leafletProxy("map", data = df_app) %>%
       clearMarkers() %>% 
       addMarkers(lng = ~att_lng,
                  lat = ~att_lat,
                  popup = ~att_nm,
                  icon = ~attIcons[att_cd])
-    })
+    })# end of attractions observe event
   
+  #Cuisines output:
+  
+  observeEvent(input$search,{
+    # checkbox for price
+    output$value <- renderPrint({ input$checkGroup })
+    # concatenating all inputs for cuisine
+    cuz=NULL
+    cuz=paste0(input$cat,collapse=" ")
+       
+  
+  #Final pull request from yelp with all filters
+    key<-'zLZesNlW8YSPyNP9poXD-_FDOhvNFACzrq-xAul5H3b6isbviX3o2EuCeifPRAsTvfz_c0lPzJUPNtzUIeowGHmhheCAxRMWz_lc5cqQAY-7X94pAvYkC3pXNjG2W3Yx'
+    business_ny <- business_search(api_key = key,location = 'New York',term = cuz,limit = 50)
+    bny=business_ny$businesses #dataframe
+    bny
+    
+  #Output to map
+  leafletProxy("map", data = bny) %>%
+    #clearMarkers() %>%
+    addMarkers(lng = bny$coordinates$longitude,
+               lat = bny$coordinates$latitude,
+               popup = ~name,
+               icon=makeIcon("chef.png",22, 22)) #Change this icon to something pretty if you like!
+    
+    
 # Output on map -------------------------------------------------------------
-})  
+})
+   })  
 
   
   
