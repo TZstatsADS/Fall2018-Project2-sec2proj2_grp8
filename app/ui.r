@@ -40,11 +40,12 @@ shinyUI(
                          `Carnegie Hall` = 'CH', `Bryant Park` = 'BP',
                          `Lincoln Center` = 'LC', `The Oculus` = 'O',
                          `Macy's Herald Square` = 'MH'
-                       ),
+                       ), selected = 'RC',
                        multiple = TRUE,
                        # maxItems = 3
                        options = list(placeholder = 'Choose at most 3 attractions')
         ),
+        
         #Slider input for cuisines
         selectizeInput('cat', "Cuisine",
                        choices = list(
@@ -52,20 +53,22 @@ shinyUI(
                          `Cuban` = 'cuban', `Indian` = 'indpak',
                          `Italian` = 'italian', `Japanese` = 'japanese',
                          `Korean` = 'korean', `Mexican` = 'mexican'
-                       ),
+                       ), selected = 'chinese',
                        multiple = TRUE,
                        # maxItems = 3
                        options = list(placeholder = 'Choose up to 3 cuisins')
         ),
+        
         # Radius slider
         sliderInput("decimal", "Distance (in miles):",
-                    min = 0, max = 2.5,
-                    value = 1.0, step=0.5),
+                    min = 0, max = 10,
+                    value = 3.0, step = 0.5),
         
         # checkbox for price
-        checkboxGroupInput("checkGroup", "Price", 
-                           choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3),
-                           selected = 1),
+        checkboxGroupInput("price_group", "Price", 
+                           choices = list("$" = "$", "$$" = "$$", "$$$" = '$$$'),
+                           selected = '$'),
+        
         actionButton("search", "Search")
         #fluidRow(column(3,tableOutput("bnytbl")))
         
