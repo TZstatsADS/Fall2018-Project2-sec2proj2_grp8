@@ -5,8 +5,8 @@ library(yelpr)
 library(geosphere)
 
 shinyServer(function(input, output) {
-  # Map rendering 
-  output$map <- renderLeaflet({
+  # init map
+  output$map = renderLeaflet({
     leaflet() %>% 
       setView(lng = -73.980, lat = 40.738, zoom = 13) %>%
       addProviderTiles("CartoDB.Positron")
@@ -47,13 +47,11 @@ shinyServer(function(input, output) {
     )
     
     # ------------------- restaurant part ------------
-    dat = NULL
     # concatenating all inputs for cuisine
-    cuz=NULL
-    cuz=paste0(input$cat,collapse=" ")
+    cuz = paste0(input$cat,collapse=" ")
     
     # grab data based on cuz
-    key<-'zLZesNlW8YSPyNP9poXD-_FDOhvNFACzrq-xAul5H3b6isbviX3o2EuCeifPRAsTvfz_c0lPzJUPNtzUIeowGHmhheCAxRMWz_lc5cqQAY-7X94pAvYkC3pXNjG2W3Yx'
+    key = 'zLZesNlW8YSPyNP9poXD-_FDOhvNFACzrq-xAul5H3b6isbviX3o2EuCeifPRAsTvfz_c0lPzJUPNtzUIeowGHmhheCAxRMWz_lc5cqQAY-7X94pAvYkC3pXNjG2W3Yx'
     business_ny = business_search(api_key = key, location = 'New York', term = cuz, limit = 50)
     dat = business_ny$businesses #dataframe
     
@@ -66,10 +64,10 @@ shinyServer(function(input, output) {
     dat[!is.na(dat$coordinates$latitude), ]
     dat$price = iconv(dat$price, to = "utf-8")
     
-    # filter the data
+    # filter the data based on mark
     dat = dat[dat$price %in% price_group, ]
     
-   
+    # get miles parameter from input
     miles = input$decimal
     
     convter_mile_to_meter = function(){
@@ -80,34 +78,28 @@ shinyServer(function(input, output) {
       meter = convter_mile_to_meter()
       len = length(att_lat)
       for( j in 1:len){
-        print(distm(c(lng, lat), c(att_lng[i], att_lat[i]), fun = distHaversine) <= meter)
         if(distm(c(lng, lat), c(att_lng[i], att_lat[i]), fun = distHaversine) <= meter){
           return(TRUE)
         }
       }
       return(FALSE)
     }
-    # get distance 
-    mile = input$decimal
     
     # filter the data based on distance
     dat = dat[mapply(check_dist, dat$coordinates$longitude, dat$coordinates$latitude), ]
     
-    #Output to map
+    # render map
     leafletProxy("map", data = dat) %>%
-      clearMarkers() %>% # for each option refresh
+      clearMarkers() %>% # hard refresh each page
       addMarkers(lng = dat$coordinates$longitude,
                  lat = dat$coordinates$latitude,
                  popup = ~name,
                  icon=makeIcon("chef.png", 22, 22)) %>% #Change this icon to something pretty if you like!
+      
       addMarkers(lng = att_lng,
                  lat = att_lat,
                  popup = att_nm,
                  icon = attIcons[att_cd])
 
   })
-# Output on map -------------------------------------------------------------
 })
-
-  
-  

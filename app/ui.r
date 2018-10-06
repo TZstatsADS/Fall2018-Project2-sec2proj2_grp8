@@ -5,7 +5,7 @@ packages.needed=setdiff(packages.used,
                         intersect(installed.packages()[,1],
                                   packages.used))
 # install additional packages
-if(length(packages.needed)>0){
+if(length(packages.needed) > 0){
   install.packages(packages.needed, dependencies = TRUE)
 }
 
@@ -23,8 +23,6 @@ shinyUI(
     dashboardSidebar(
       sidebarMenu(
         menuItem("NYC Map", tabName = "mapmenu", icon = icon("bank")),
-        #textOutput("var"),
-        #DT::dataTableOutput("at"),
   
         # Attractions selection
         selectizeInput('att', "Attractions",
@@ -69,11 +67,10 @@ shinyUI(
                            choices = list("$" = "$", "$$" = "$$", "$$$" = '$$$'),
                            selected = '$'),
         
+        # search action
         actionButton("search", "Search")
-        #fluidRow(column(3,tableOutput("bnytbl")))
-        
-        ) # End of sidebarMenu
-    ), # End of Sidebar
+        ) 
+    ), 
     
     dashboardBody(
       tabItems(
@@ -81,8 +78,7 @@ shinyUI(
                 leafletOutput("map", height = 760)
                 
         )
-      ) # End of tabItems
-    ) # End of dashboardBody
-  ) # End
+      ) 
+    ) 
+  ) 
 )          
-
