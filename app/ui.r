@@ -76,7 +76,6 @@ shinyUI(
       tabItems(
         tabItem(tabName = "mapmenu",
                 leafletOutput("map", height = 760)
-                
         )
       ) 
     ) 
