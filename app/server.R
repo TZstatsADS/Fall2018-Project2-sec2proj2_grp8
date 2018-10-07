@@ -69,7 +69,7 @@ shinyServer(function(input, output) {
     
     # get miles parameter from input
     miles = input$decimal
-    
+
     convter_mile_to_meter = function(){
       return(miles*1609.34)
     }
@@ -77,7 +77,7 @@ shinyServer(function(input, output) {
     check_dist = function(lng, lat){
       meter = convter_mile_to_meter()
       len = length(att_lat)
-      for( j in 1:len){
+      for( i in 1:len){
         if(distm(c(lng, lat), c(att_lng[i], att_lat[i]), fun = distHaversine) <= meter){
           return(TRUE)
         }
