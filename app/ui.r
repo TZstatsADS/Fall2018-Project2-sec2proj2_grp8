@@ -51,41 +51,14 @@ shinyUI(
                          `Korean` = 'korean', `Mexican` = 'mexican'
                        ),
                        multiple = TRUE,
-<<<<<<< HEAD
                        options = list(maxItems = 3, placeholder = 'Choose up to 3 cuisins')
-=======
-                       # maxItems = 3
-                       options = list(placeholder = 'Choose up to 3 cuisines')
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a0b5e1ae5fb2ff09da3c5ecff8df575204f1421
-=======
->>>>>>> a91b3372cf64a5772e32dd5abae13ef1afc4e48f
->>>>>>> 0a0b5e1ae5fb2ff09da3c5ecff8df575204f1421
         ),
         
         # Radius slider
         sliderInput("decimal", "Distance (in miles):",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a91b3372cf64a5772e32dd5abae13ef1afc4e48f
-                    min = 0, max = 10,
-                    value = 3.0, step = 0.5
-        ),
-=======
                     min = 0, max = 2.5,
                     value = 1.0, step = 0.5),
->>>>>>> 0a0b5e1ae5fb2ff09da3c5ecff8df575204f1421
-<<<<<<< HEAD
-=======
-=======
-                    min = 0, max = 2.5,
-                    value = 1.0, step = 0.5),
->>>>>>> 0a0b5e1ae5fb2ff09da3c5ecff8df575204f1421
->>>>>>> a91b3372cf64a5772e32dd5abae13ef1afc4e48f
+
         
         # checkbox for price
         radioButtons("price_group", "Price", 
