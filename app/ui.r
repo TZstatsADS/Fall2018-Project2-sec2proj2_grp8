@@ -59,7 +59,7 @@ shinyUI(
         
         # Radius slider
         sliderInput("decimal", "Distance (in miles):",
-                    min = 0, max = 2,
+                    min = 0, max = 2.5,
                     value = 1.0, step = 0.5),
         
         # checkbox for price
