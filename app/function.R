@@ -13,7 +13,8 @@ get_yelp_data <- function(latitude = 40.748817,
                           longitude = -73.985428,
                           categories = NULL,
                           radius = 5000,
-                          price = NULL){
+                          price = NULL,
+                          sort = "best_match"){
 
   # Type inspection ---------------------------------------------------------
   if(!is.double(latitude)) {
@@ -31,23 +32,15 @@ get_yelp_data <- function(latitude = 40.748817,
   if(!is.numeric(radius)) {
     stop("radius must be an integer number")
   } else {
-    rad <- as.integer(radius)
+    rad <- as.integer(radius + 0.5)
   }
   
-  if(is.null(price)) {
-    p <- as.integer(price)
-  } else if (is.numeric(price)){
-    stop("price must be of type integer")
-  } else {
-    p <- as.integer(price)
-  }
-
   # Initialization ---------------------------------------------------------
   yelp <- "https://api.yelp.com"
   term <- "restaurants"
   location <- "NYC"
-  typ <- categories
-  limit <- 50
+  p <- price
+  limit <- 10
 
   # Add filter to search engine
   url <- modify_url(yelp, path = c("v3", "businesses", "search"),
@@ -57,8 +50,9 @@ get_yelp_data <- function(latitude = 40.748817,
                                  longitude = lng,
                                  latitude = lat,
                                  price = p,
-                                 categories = typ,
-                                 radius = rad
+                                 categories = categories,
+                                 radius = rad,
+                                 sort_by = sort
                                  )
                     )
   
