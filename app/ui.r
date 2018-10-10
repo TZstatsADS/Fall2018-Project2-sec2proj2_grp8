@@ -54,13 +54,13 @@ shinyUI(
                        ), selected = 'chinese',
                        multiple = TRUE,
                        # maxItems = 3
-                       options = list(placeholder = 'Choose up to 3 cuisins')
+                       options = list(placeholder = 'Choose up to 3 cuisines')
         ),
         
         # Radius slider
         sliderInput("decimal", "Distance (in miles):",
-                    min = 0, max = 10,
-                    value = 3.0, step = 0.5),
+                    min = 0, max = 2,
+                    value = 1.0, step = 0.5),
         
         # checkbox for price
         checkboxGroupInput("price_group", "Price", 
