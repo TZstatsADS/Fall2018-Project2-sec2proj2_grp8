@@ -72,7 +72,8 @@ get_yelp_data <- function(latitude = 40.748817,
                        latitude = x$coordinates$latitude, 
                        longitude = x$coordinates$longitude, 
                        address1 = x$location$address1, 
-                       city = x$location$city, 
+                       city = x$location$city,
+                       categories = x$categories,
                        state = x$location$state, 
                        distance = x$distance
                        )
@@ -88,7 +89,8 @@ get_yelp_data <- function(latitude = 40.748817,
                      latitude=parse_list$latitude, 
                      longitude = parse_list$longitude, 
                      address1 = parse_list$address1, 
-                     city = parse_list$city, 
+                     city = parse_list$city,
+                     categories = parse_list$categories,
                      state = parse_list$state, 
                      distance= parse_list$distance)
     df

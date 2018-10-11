@@ -16,7 +16,12 @@ library(leaflet)
 shinyUI(
   dashboardPage(
     skin = 'blue',
-    dashboardHeader(title = "NYC Trip Guide", titleWidth = 240
+    dashboardHeader(title = "NYC Trip Guide", titleWidth = 240,
+                    dropdownMenu(notificationItem(includeHTML("ref.html"),
+                                                  icon = icon('info'),
+                                                  status = "info"),
+                                                  badgeStatus = NULL,
+                                                  type = "notification")
     ),# End of Header
   
     dashboardSidebar(
@@ -61,7 +66,7 @@ shinyUI(
 
         
         # checkbox for price
-        radioButtons("price_group", "Price", 
+        checkboxGroupInput("price_group", "Price", 
                      choices = list(`$` = 1, `$$` = 2, `$$$` = 3, `$$$$` = 4),
                      selected = character(0)
         ),

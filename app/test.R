@@ -2,11 +2,13 @@ library(yelpr)
 library(dplyr)
 library(httr)
 library(geosphere)
+library(tidyr)
 source("function.R")
-
-a = character(0)
-length(a)
-
+a <- get_yelp_data()
+a$test <- NA
+for(i in 1:nrow(a)) {
+  a$test[i] = a$categories[[i]]$title
+}
 
 setwd("..")
 att_loc <- read.csv("./data/NYC_attractions.csv")
@@ -25,4 +27,11 @@ business_ny = business_search(api_key = key,
                               radius = 8000,
                               limit = 50)
 
-##a <- get_yelp_data(sort = "rating")
+
+
+
+
+
+
+
+

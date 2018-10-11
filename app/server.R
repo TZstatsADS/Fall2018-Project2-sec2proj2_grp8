@@ -80,7 +80,7 @@ shinyServer(function(input, output) {
         if (length(input$price_group) == 0){
           price_group = NULL
         } else {
-          price_group = input$price_group
+          price_group = paste0(input$price_group, collapse=",")
         }
         
         # get filter parameter from input
@@ -112,6 +112,11 @@ shinyServer(function(input, output) {
                               price = price_group,
                               sort = set_filter)
           
+          dat$cat <- NA
+          for(i in 1:nrow(dat)) {
+            dat$cat[i] = dat$categories[[i]]$title
+          }
+          
           'business_ny = business_search(api_key = key,
                                         location = ,
                                         latitude = att_lat[i],
@@ -125,7 +130,7 @@ shinyServer(function(input, output) {
           leafletProxy("map", data = dat) %>%
             addMarkers(lng = dat$longitude,
                        lat = dat$latitude,
-                       popup = ~dat$name,
+                       popup = ~dat$cat,##~dat$name
                        icon=makeIcon("food.png", 25, 25))
         } # End for loop
       } # End if
