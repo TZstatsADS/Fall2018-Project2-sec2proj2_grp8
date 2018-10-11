@@ -3,6 +3,8 @@
 ## Project Title: A First Timer's Guide to the Best of New York City!
 Term: Fall 2018
 
+##Link to the shiny app here: https://alexyhchen.shinyapps.io/TripPlanner/ 
+
 + Team #8
 + **A First Timer's Guide to the Best of New York City!**: 
 	+ Chen, Yen-Hsiang (Alex)
