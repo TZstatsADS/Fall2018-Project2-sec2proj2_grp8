@@ -111,7 +111,7 @@ shinyServer(function(input, output) {
                               categories = cuz,
                               price = price_group,
                               sort = set_filter)
-          
+         
           dat$cat <- NA
           for(i in 1:nrow(dat)) {
             dat$cat[i] = dat$categories[[i]]$title
@@ -132,8 +132,16 @@ shinyServer(function(input, output) {
                        lat = dat$latitude,
                        popup = paste("<b>",dat$name,"</b>","<br>",
                                      dat$cat,"<br>",
-                                     dat$price,"<br>"),
-                       icon=makeIcon("food.png", 25, 25))
+                                     "Price:",dat$price,"<br>",
+                                     "Number of Reviews:",dat$review_count),
+                       icon=makeIcon("food.png", 25, 25))%>%
+            addCircles(lng=att_lng,
+                       lat=att_lat,
+                       radius = sqrt(dat$distance/0.000621371),
+                       fillOpacity = 0.04,
+                       color = 'yellow'
+                       
+                         )
         } # End for loop
       } # End if
     })
