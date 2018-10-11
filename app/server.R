@@ -130,7 +130,9 @@ shinyServer(function(input, output) {
           leafletProxy("map", data = dat) %>%
             addMarkers(lng = dat$longitude,
                        lat = dat$latitude,
-                       popup = ~dat$cat,##~dat$name
+                       popup = paste("<b>",dat$name,"</b>","<br>",
+                                     dat$cat,"<br>",
+                                     dat$price,"<br>"),
                        icon=makeIcon("food.png", 25, 25))
         } # End for loop
       } # End if
