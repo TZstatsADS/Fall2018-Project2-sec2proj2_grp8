@@ -134,10 +134,11 @@ shinyServer(function(input, output) {
                                      dat$cat,"<br>",
                                      "Price:",dat$price,"<br>",
                                      "Number of Reviews:",dat$review_count),
-                       icon=makeIcon("food.png", 25, 25))%>%
+                       icon=makeIcon("food.png", 25, 25)) %>%
+            clearShapes %>%
             addCircles(lng=att_lng,
                        lat=att_lat,
-                       radius = sqrt(dat$distance/0.000621371),
+                       radius = max(sqrt(dat$distance/0.000621371)),
                        fillOpacity = 0.04,
                        color = 'yellow'
                        

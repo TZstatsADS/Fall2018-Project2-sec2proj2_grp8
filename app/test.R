@@ -5,10 +5,8 @@ library(geosphere)
 library(tidyr)
 source("function.R")
 a <- get_yelp_data()
-a$test <- NA
-for(i in 1:nrow(a)) {
-  a$test[i] = a$categories[[i]]$title
-}
+a$name[which.max(a$distance)]
+max(a$distance)
 
 setwd("..")
 att_loc <- read.csv("./data/NYC_attractions.csv")

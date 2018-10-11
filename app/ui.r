@@ -78,6 +78,17 @@ shinyUI(
                      selected = character(0)
         ),
         
+        # future function checkbox for topic
+        selectizeInput('topic', "Topic (Future Function)",
+                       choices = list(
+                         `Family` = 'fm', `Dating` = 'dt',
+                         `Dessert` = 'ds', `Pet friendly` = 'pf',
+                         `Nice Picture` = 'np'
+                       ),
+                       multiple = TRUE,
+                       options = list(maxItems = 3, placeholder = 'Choose at most 3')
+        ),
+        
         # search action
         actionButton("search", "Search")
       ) # End of sidebarMenu 
