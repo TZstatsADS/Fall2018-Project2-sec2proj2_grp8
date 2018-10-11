@@ -1,0 +1,12 @@
+name: test
+title:
+username:
+account: suw2102
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 505893
+bundleId: 1636990
+url: https://suw2102.shinyapps.io/test/
+when: 1539265872.07827
+asMultiple: FALSE
+asStatic: FALSE
