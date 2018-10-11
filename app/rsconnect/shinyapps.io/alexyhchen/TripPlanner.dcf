@@ -1,0 +1,12 @@
+name: TripPlanner
+title: TripPlanner
+username:
+account: alexyhchen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 507275
+bundleId: 1637237
+url: https://alexyhchen.shinyapps.io/TripPlanner/
+when: 1539270861.85677
+asMultiple: FALSE
+asStatic: FALSE
