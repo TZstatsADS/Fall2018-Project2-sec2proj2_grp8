@@ -56,7 +56,7 @@ shinyUI(
                          `Korean` = 'korean', `Mexican` = 'mexican'
                        ),
                        multiple = TRUE,
-                       options = list(maxItems = 3, placeholder = 'Choose up to 3 cuisins')
+                       options = list(maxItems = 3, placeholder = 'Choose up to 3 cuisines')
         ),
         
         # Radius slider
